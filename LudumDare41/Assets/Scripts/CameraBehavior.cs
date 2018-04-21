@@ -19,7 +19,7 @@ public class CameraBehavior : MonoBehaviour {
 
     void Start()
     {
-        target = GameObject.Find("MainCharacter").transform;
+        target = GameObject.Find("Player").transform;
     }
 
     void LateUpdate()
