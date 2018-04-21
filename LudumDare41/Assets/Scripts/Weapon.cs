@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour
     public LayerMask whatToHit;
 
     public Transform BulletTrailPrefab;
+    public Transform MuzzleFlashPrefab;
     float timeToSpawnEffect = 0;
     public float effectSpawnRate = 10;
 
@@ -75,5 +76,7 @@ public class Weapon : MonoBehaviour
     void Effect()
     {
         Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation);
+        //Instantiate(MuzzleFlashPrefab, firePoint.position, firePoint.rotation);
+
     }
 }
