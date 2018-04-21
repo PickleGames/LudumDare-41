@@ -10,14 +10,16 @@ public class UIScript : MonoBehaviour {
     public GameObject loseScreen;
     public AudioSource GameMusic;
     public GameObject optionPanel;
+    public KeyCode option;
 
     void Update()
     {
         if (loseScreen.activeSelf)
         {
+            option = KeyCode.None;
             optionPanel.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(option))
         {
             if (optionPanel.activeSelf)
             {
