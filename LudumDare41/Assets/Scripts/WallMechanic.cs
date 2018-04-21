@@ -30,10 +30,12 @@ public class WallMechanic : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            Time.timeScale = 0f;
+            other.gameObject.GetComponent<PlayerMovement>().enabled = false;
+            other.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
             loseScreen.SetActive(true);
             Debug.Log("Player Dieeedddd");
             moveSpeed = 0;
+
         }
     }
 
