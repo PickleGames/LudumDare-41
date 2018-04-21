@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WallMechanic : MonoBehaviour {
+    public GameObject loseScreen;
     public float moveSpeed;
     private Transform target;
 
@@ -28,6 +30,8 @@ public class WallMechanic : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
+            Time.timeScale = 0f;
+            loseScreen.SetActive(true);
             Debug.Log("Player Dieeedddd");
             moveSpeed = 0;
         }
