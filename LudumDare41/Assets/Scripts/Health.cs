@@ -6,7 +6,7 @@ public class Health : MonoBehaviour {
 
     public float MAX_HEALTH;
     private float currentHealth;
-
+    private float healthPercent;
     private SpriteRenderer spriteR;
     private Color defaultColor, damageColor;
 	// Use this for initialization
@@ -20,6 +20,8 @@ public class Health : MonoBehaviour {
     float timer;
 	// Update is called once per frame
 	void Update () {
+        healthPercent = currentHealth / MAX_HEALTH;
+
         if (spriteR.color != defaultColor)
         {
             timer += Time.deltaTime;
@@ -41,5 +43,10 @@ public class Health : MonoBehaviour {
     public float GetHealth()
     {
         return currentHealth;
+    }
+
+    public float GetHealthPercentage()
+    {
+        return healthPercent;
     }
 }
