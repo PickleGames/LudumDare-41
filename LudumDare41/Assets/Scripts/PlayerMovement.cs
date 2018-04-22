@@ -35,14 +35,16 @@ public class PlayerMovement : MonoBehaviour {
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
         }
-        else if (Input.GetKey(jump) && grounded)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        }
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
+
+        if (Input.GetKey(jump) && grounded)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+       
 		
 	}
 }
