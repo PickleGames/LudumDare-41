@@ -30,11 +30,14 @@ public class WallMechanic : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
+            moveSpeed = 0;
+            Debug.Log("Wall Stop Moving...");
             other.gameObject.GetComponent<PlayerMovement>().enabled = false;
             other.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
             loseScreen.SetActive(true);
             Debug.Log("Player Dieeedddd");
-            moveSpeed = 0;
+            
+            
 
         }
     }
