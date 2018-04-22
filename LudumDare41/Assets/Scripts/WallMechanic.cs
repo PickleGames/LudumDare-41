@@ -33,6 +33,8 @@ public class WallMechanic : MonoBehaviour {
             Debug.Log("Wall Stop Moving...");
             other.gameObject.GetComponent<PlayerMovement>().enabled = false;
             other.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+            other.gameObject.GetComponentInChildren<Weapon>().enabled = false;
+            other.gameObject.GetComponentInChildren<ArmRotation>().enabled = false;
             loseScreen.SetActive(true);
             Debug.Log("Player Dieeedddd");
             
