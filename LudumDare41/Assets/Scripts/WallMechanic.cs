@@ -25,7 +25,6 @@ public class WallMechanic : MonoBehaviour {
         this.transform.position = new Vector2(this.transform.position.x, target.transform.position.y);
     }
 
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
@@ -38,6 +37,5 @@ public class WallMechanic : MonoBehaviour {
 
         }
     }
-
 
 }
