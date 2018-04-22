@@ -8,3 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SideScrolling.unity
     guid: c2f3b43626e73f54c83f0e88af4c4baa
+  - enabled: 1
+    path: Assets/Scenes/Miguel.unity
+    guid: 44d71346e2799d2499bd80a6c273c602
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 792f1ea4fb8b2b14bb8e69b63a28416e
