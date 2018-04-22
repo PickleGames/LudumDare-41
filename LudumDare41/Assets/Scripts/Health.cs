@@ -37,4 +37,9 @@ public class Health : MonoBehaviour {
         spriteR.color = damageColor;
 
     }
+
+    public float GetHealth()
+    {
+        return currentHealth;
+    }
 }

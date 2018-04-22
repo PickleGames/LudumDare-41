@@ -8,14 +8,22 @@ public class EnemyAI : MonoBehaviour {
     public float walkSpeed;
     public float patrolTime;
 
+    private Health health;
+
     // Use this for initialization
     void Start () {
-        rb = GetComponent<Rigidbody2D>();	
+        rb = GetComponent<Rigidbody2D>();
+        health = GetComponent<Health>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         Patrol();
+
+        if(health.GetHealth() <= 0)
+        {
+            Destroy(this.gameObject);
+        }
 	}
 
     float walkTimer = 0;

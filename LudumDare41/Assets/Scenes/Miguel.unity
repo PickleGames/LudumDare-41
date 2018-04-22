@@ -288,6 +288,11 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1174605163}
+    - target: {fileID: 114117628224597600, guid: 46b3a1a957e8046498dfad3949564b70,
+        type: 2}
+      propertyPath: MAX_HEALTH
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46b3a1a957e8046498dfad3949564b70, type: 2}
   m_IsPrefabParent: 0
