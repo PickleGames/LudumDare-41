@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
     Transform firePoint;
 
     public Transform target;
+    public float range;
 
     void Awake()
     {
@@ -44,7 +45,8 @@ public class Weapon : MonoBehaviour
 
         if (target != null)
         {
-            if (Time.time > timeToFire)
+            float distance = (target.position - this.transform.position).sqrMagnitude;
+            if (Time.time > timeToFire && distance <= range)
             {
                 timeToFire = Time.time + 1 / fireRate;
                 Shoot(target.position);
