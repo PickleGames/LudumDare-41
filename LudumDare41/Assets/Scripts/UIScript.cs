@@ -9,13 +9,36 @@ public class UIScript : MonoBehaviour {
     public GameObject MusicToggle;
     public GameObject loseScreen;
     public AudioSource GameMusic;
+    public GameObject player;
     public GameObject optionPanel;
+    public Image content;
+    public Health health;
     public KeyCode option;
+
+    void Start()
+    {
+        content.fillAmount = health.GetHealthPercentage(); 
+    }
 
     void Update()
     {
+        content.fillAmount = health.GetHealthPercentage();
+
+        if (health.GetHealthPercentage() <= 0)
+        {
+            if (player.gameObject.GetComponent<Transform>().rotation.z == 0)
+            {
+                player.gameObject.GetComponent<Transform>().Rotate(0, 0, 90);
+            }
+            player.gameObject.GetComponent<PlayerMovement>().enabled = false;
+            player.gameObject.GetComponentInChildren<Weapon>().enabled = false;
+            player.gameObject.GetComponentInChildren<ArmRotation>().enabled = false;
+            player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            loseScreen.SetActive(true);
+        }
         if (loseScreen.activeSelf)
         {
+            
             option = KeyCode.None;
             optionPanel.SetActive(false);
         }
