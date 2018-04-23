@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         
 	}
 
@@ -54,10 +54,10 @@ public class PlayerMovement : MonoBehaviour {
        
 		if(rb.velocity.x < 0)
         {
-            transform.localScale = new Vector2(-1, 1);
+            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), Mathf.Abs(transform.localScale.y));
         }else
         {
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), Mathf.Abs(transform.localScale.y));
         }
 	}
 
