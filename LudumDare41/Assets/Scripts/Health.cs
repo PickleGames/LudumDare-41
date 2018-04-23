@@ -9,14 +9,13 @@ public class Health : MonoBehaviour {
     private float currentHealth;
     private float healthPercent;
     private SpriteRenderer spriteR;
-    private Color defaultColor, damageColor;
+    public Color defaultColor, damageColor;
     private bool isDead = false;
 	// Use this for initialization
 	void Start () {
         currentHealth = MAX_HEALTH;
         spriteR = GetComponentInChildren<SpriteRenderer>();
         defaultColor = spriteR.color;
-        damageColor = Color.red;
 	}
 
     float timer;
