@@ -26,6 +26,10 @@ public class UIScript : MonoBehaviour {
 
         if (health.GetHealthPercentage() <= 0)
         {
+            if (player.gameObject.GetComponent<Transform>().rotation.z == 0)
+            {
+                player.gameObject.GetComponent<Transform>().Rotate(0, 0, 90);
+            }
             player.gameObject.GetComponent<PlayerMovement>().enabled = false;
             player.gameObject.GetComponentInChildren<Weapon>().enabled = false;
             player.gameObject.GetComponentInChildren<ArmRotation>().enabled = false;
@@ -34,6 +38,7 @@ public class UIScript : MonoBehaviour {
         }
         if (loseScreen.activeSelf)
         {
+            
             option = KeyCode.None;
             optionPanel.SetActive(false);
         }
