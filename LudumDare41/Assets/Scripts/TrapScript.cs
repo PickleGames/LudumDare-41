@@ -17,6 +17,7 @@ public class TrapScript : MonoBehaviour {
         {
             wall.moveSpeed = 0;
             Debug.Log("Wall Stop Moving...");
+            other.gameObject.GetComponent<Transform>().Rotate(0,0, 90);
             other.gameObject.GetComponent<PlayerMovement>().enabled = false;
             other.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             other.gameObject.GetComponentInChildren<Weapon>().enabled = false;

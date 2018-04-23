@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 
+    public GameObject blood;
     public float MAX_HEALTH;
     private float currentHealth;
     private float healthPercent;
     private SpriteRenderer spriteR;
     private Color defaultColor, damageColor;
+    private bool isDead = false;
 	// Use this for initialization
 	void Start () {
         currentHealth = MAX_HEALTH;
@@ -22,6 +24,11 @@ public class Health : MonoBehaviour {
 	void Update () {
         healthPercent = currentHealth / MAX_HEALTH;
 
+        if (healthPercent <= 0 && !isDead)
+        {
+            isDead = true;
+            Blood();
+        }
         if (spriteR.color != defaultColor)
         {
             timer += Time.deltaTime;
@@ -33,8 +40,14 @@ public class Health : MonoBehaviour {
         }
     }
 
+    public void Blood()
+    {
+        Instantiate(blood, this.transform.position, Quaternion.identity);
+    }
+
     public void TakeDamage(float damage)
     {
+        Blood();
         currentHealth -= damage;
         spriteR.color = damageColor;
 
