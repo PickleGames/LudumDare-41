@@ -38,5 +38,14 @@ public class EnemyAI : MonoBehaviour {
             walkTimer = 0;
         }
 
+        if (rb.velocity.x < 0)
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
+
     }
 }
