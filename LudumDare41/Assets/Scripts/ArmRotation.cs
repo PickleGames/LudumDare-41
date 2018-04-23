@@ -7,11 +7,11 @@ public class ArmRotation : MonoBehaviour {
     private float rotZ;
     public int rotationOffset = 0;
     public Transform target;
-
+    private Rigidbody2D rb;
     // Use this for initialization
     void Start()
     {
-      
+        rb = GetComponentInParent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -38,6 +38,14 @@ public class ArmRotation : MonoBehaviour {
         // normalizing the vector. Meaning that the sum of the vector (x + y + z) will equal to 1.
         difference.Normalize();
         rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;   // find the angle in degrees
+        if (rb.velocity.x < 0 )
+        {
+            transform.localScale = new Vector2(-1, -1);
+
+        }else
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + rotationOffset);
     }
 }
