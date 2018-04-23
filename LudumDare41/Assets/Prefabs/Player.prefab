@@ -325,6 +325,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blood: {fileID: 1365586614707034, guid: f5894558b9f0fab4894eaa92bd14e025, type: 2}
   MAX_HEALTH: 100
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  damageColor: {r: 0.88235295, g: 0.20112455, b: 0.20112455, a: 1}
 --- !u!114 &114572710388768630
 MonoBehaviour:
   m_ObjectHideFlags: 1

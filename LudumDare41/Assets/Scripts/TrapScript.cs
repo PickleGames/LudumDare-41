@@ -6,6 +6,7 @@ public class TrapScript : MonoBehaviour {
     public float spinSpeed;
     public GameObject loseScreen;
     public WallMechanic wall;
+    public GameObject blood;
     // Update is called once per frame
     void Update () {
         this.transform.Rotate(0,0,spinSpeed);
@@ -24,7 +25,7 @@ public class TrapScript : MonoBehaviour {
             other.gameObject.GetComponentInChildren<ArmRotation>().enabled = false;
             loseScreen.SetActive(true);
             Debug.Log("Player Dieeedddd");
-
+            Instantiate(blood, this.transform.position, Quaternion.identity);
 
 
         }
