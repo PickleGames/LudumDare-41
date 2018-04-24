@@ -211,17 +211,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 208565212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 775b9fd307da1474d96a0bed44b700e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ec6fce1127aab3478dde9dc0d15c271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicToggle: {fileID: 0}
-  loseScreen: {fileID: 0}
-  GameMusic: {fileID: 0}
-  player: {fileID: 0}
-  optionPanel: {fileID: 0}
-  content: {fileID: 0}
-  health: {fileID: 0}
-  option: 0
 --- !u!4 &208565214
 Transform:
   m_ObjectHideFlags: 0
@@ -657,8 +649,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0.5147059, g: 0.21572232, b: 0.21572232, a: 0.653}
+    m_HighlightedColor: {r: 0.6838235, g: 0.31174308, b: 0.31174308, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
