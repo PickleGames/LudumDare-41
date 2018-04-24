@@ -23,8 +23,10 @@ public class Health : MonoBehaviour {
 	void Update () {
         healthPercent = currentHealth / MAX_HEALTH;
 
+    
         if (healthPercent <= 0 && !isDead)
         {
+            
             isDead = true;
             Blood();
         }
@@ -46,10 +48,10 @@ public class Health : MonoBehaviour {
 
     public void TakeDamage(float damage)
     {
+
         Blood();
         currentHealth -= damage;
         spriteR.color = damageColor;
-
     }
 
     public float GetHealth()

@@ -82,6 +82,11 @@ public class UIScript : MonoBehaviour {
         }
     }
 
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     public void reloadScene()
     {
         Debug.Log("Reloading Scene...");

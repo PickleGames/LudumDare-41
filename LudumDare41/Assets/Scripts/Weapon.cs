@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     public float fireRate = 0;
     public float damage = 10;
     public LayerMask whatToHit;
-
+    public AudioSource audio;
     public Transform BulletTrailPrefab;
     public Transform MuzzleFlashPrefab;
     float timeToSpawnEffect = 0;
@@ -28,11 +28,11 @@ public class Weapon : MonoBehaviour
             Debug.LogError("No SHOOTING POINT!!");
         }
     }
-
+        
     // Use this for initialization
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -80,6 +80,7 @@ public class Weapon : MonoBehaviour
     {
        
         Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
+        audio.Play();
 
         RaycastHit2D hit = Physics2D.Raycast(firePointPosition, target - firePointPosition, 100, whatToHit);
         if (Time.time >= timeToSpawnEffect)
