@@ -40,11 +40,11 @@ public class EnemyAI : MonoBehaviour {
 
         if (rb.velocity.x < 0)
         {
-            transform.localScale = new Vector2(-1, 1);
+            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), Mathf.Abs(transform.localScale.y));
         }
         else
         {
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), Mathf.Abs(transform.localScale.y));
         }
 
     }
