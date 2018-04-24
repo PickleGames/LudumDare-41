@@ -14,6 +14,14 @@ public class TrapScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Destroy(other.gameObject);
+            Instantiate(blood, this.transform.position, Quaternion.identity);
+            Instantiate(blood, this.transform.position, Quaternion.identity);
+            Instantiate(blood, this.transform.position, Quaternion.identity);
+        }
+
         if (other.gameObject.tag == "Player")
         {
             wall.moveSpeed = 0;
