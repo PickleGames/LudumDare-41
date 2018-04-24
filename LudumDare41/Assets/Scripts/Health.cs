@@ -57,6 +57,15 @@ public class Health : MonoBehaviour {
         return currentHealth;
     }
 
+    public void IncrementHealth(float health)
+    {
+        if (currentHealth + health <= MAX_HEALTH)
+        {
+            currentHealth += health;
+        }
+      
+    }
+
     public float GetHealthPercentage()
     {
         return healthPercent;

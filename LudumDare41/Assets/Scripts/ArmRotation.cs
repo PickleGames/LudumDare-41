@@ -38,13 +38,13 @@ public class ArmRotation : MonoBehaviour {
         // normalizing the vector. Meaning that the sum of the vector (x + y + z) will equal to 1.
         difference.Normalize();
         rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;   // find the angle in degrees
-        if (rb.velocity.x < 0 )
+        if (rb.velocity.x < 0)
         {
-            transform.localScale = new Vector2(-1, -1);
+            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), -Mathf.Abs(transform.localScale.y));
 
         }else
         {
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), Mathf.Abs(transform.localScale.y));
         }
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + rotationOffset);
     }
