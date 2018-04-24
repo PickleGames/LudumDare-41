@@ -5388,7 +5388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseScreen: {fileID: 0}
-  moveSpeed: -0.004
+  moveSpeed: -0.001
 --- !u!114 &114279115607842680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5476,7 +5476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseScreen: {fileID: 0}
-  moveSpeed: 0.004
+  moveSpeed: 0.001
 --- !u!212 &212024211290439180
 SpriteRenderer:
   m_ObjectHideFlags: 1

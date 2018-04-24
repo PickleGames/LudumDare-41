@@ -42,7 +42,7 @@ public class ArmRotation : MonoBehaviour {
         {
             transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), -Mathf.Abs(transform.localScale.y));
 
-        }else
+        }else if(rb.velocity.x > 0)
         {
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), Mathf.Abs(transform.localScale.y));
         }

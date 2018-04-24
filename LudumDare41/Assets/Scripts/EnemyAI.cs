@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour {
-
     private Rigidbody2D rb;
     public float walkSpeed;
     public float patrolTime;
@@ -19,8 +18,7 @@ public class EnemyAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Patrol();
-
-        if(health.GetHealth() <= 0)
+        if (health.GetHealth() <= 0)
         {
             Destroy(this.gameObject);
         }
